@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../../assets/plugins/animate.css">
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Calcula Tu indice
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding color="secondary" style="background:black;">
+
+<ion-card color="dark">
+  <img src="../../assets/imgs/students.png" class="animated bounceInDown">
+  <ion-card-content class="animated jello">
+
+      <ion-list class="animated rubberBand">
+          <ion-item>
+            <ion-label>Calificacion</ion-label>
+            <ion-select [(ngModel)]="c1" cancelText="Cancelar" okText="Listo!" id="calificacion_1">
+              <ion-option value="4" selected="true">A</ion-option>
+              <ion-option value="3">B</ion-option>
+              <ion-option value="2">C</ion-option>
+              <ion-option value="1">D</ion-option>
+              <ion-option value="0">F</ion-option>
+            </ion-select>
+            <ion-input type="number" [(ngModel)]="credito1" length="1" maxlength="4" value="" id="credito_1" placeholder="Creditos"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Calificacion</ion-label>
+            <ion-select [(ngModel)]="c2" cancelText="Cancelar" okText="Listo!" id="calificacion_2">
+              <ion-option value="4" selected="true">A</ion-option>
+              <ion-option value="3">B</ion-option>
+              <ion-option value="2">C</ion-option>
+              <ion-option value="1">D</ion-option>
+              <ion-option value="0">F</ion-option>
+            </ion-select>
+            <ion-input type="number" [(ngModel)]="credito2" length="1" maxlength="4" value="" id="credito_2" placeholder="Creditos"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <button ion-button full (click)="calcular()" color="secondary" block>Calcular</button>
+
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
